@@ -2,11 +2,14 @@
 "use strict";
 
 const assert = require("./assert.js");
+const App = require("./App.js");
 
-describe("Nothing", function() {
+describe("App", function() {
 
-	it("runs tests", function() {
-		assert.todo();
+	it("uses rot-13 to transform nput to output", function() {
+		const app = new App();
+		const output = app.run("hello");
+		assert.equal(output, "uryyb");
 	});
 
 });
